@@ -114,3 +114,5 @@ clj꞉cellular-automata-clojure.core꞉> 
 clj꞉cellular-automata-clojure.core꞉> 
 #'cellular-automata-clojure.core/split-up
 clj꞉cellular-automata-clojure.core꞉> 
+#'cellular-automata-clojure.core/get-next-state
+clj꞉cellular-automata-clojure.core꞉> 

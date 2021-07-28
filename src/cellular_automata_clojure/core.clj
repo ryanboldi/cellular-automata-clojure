@@ -6,10 +6,14 @@
   [vec ruleset]
   (ruleset vec))
 
+
+(defn split-up [input]
+  (into [[(last input) (first input) (second input)]] (map #(apply vector %) (partition 3 1 input input))))
+
 (defn get-next-state
   [input rule]
   (->> input
-       (#(partition 3 1 % %))
+       (split-up)
        (map #(apply-rule (apply vector %) rule))
        (apply vector)))
 
@@ -21,6 +25,3 @@
 (get-next-state [1 1 1 0 0 0 1 1 1 0 0 0] rules/rule30)
 
 (partition 3 1 [1 1 1 0 0 0 1 1 1 0 0 0] [1 1 1 0 0 0 1 1 1 0 0 0])
-
-(defn split-up [input]
-  (into [[(last input) (first input) (second input)]] (map #(apply vector %) (partition 3 1 input input))))
