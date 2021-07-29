@@ -12,3 +12,5 @@ pom.xml.asc
 .hg/
 *.db
 .calva/output-window/output.calva-repl
+*.calva-repl
+.calva/output-window/output.calva-repl

@@ -18,10 +18,16 @@
        (map #(apply-rule (apply vector %) rule))
        (apply vector)))
 
+(defn visualize [input]
+  (->> input
+       (map #(if (zero? %) "." "#"))
+       (apply str)))
+
 (defn -main [generations]
-  (loop [i 0 stop-at generations curr-state [0 0 0 1 0 0 0]]
+  (loop [i 0 stop-at generations curr-state [0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1]]
     (if (= i stop-at)
       curr-state
-      (do (println curr-state) (flush)
+      (do (println (visualize curr-state)) (flush)
           (recur (inc i) stop-at (get-next-state curr-state rules/rule30))))))
 
+(-main 10)
