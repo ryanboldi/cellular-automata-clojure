@@ -13,7 +13,6 @@
           output (core/split-up input)]
       (is (= (count input) (count output))))))
 
-
 (deftest one-d-rule-prop
   (testing "length of output is the same as the length of the input"
     (let [input (apply vector (repeat 10 0))

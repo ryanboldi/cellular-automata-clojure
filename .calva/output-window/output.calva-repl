@@ -116,3 +116,7 @@ clj꞉cellular-automata-clojure.core꞉> 
 clj꞉cellular-automata-clojure.core꞉> 
 #'cellular-automata-clojure.core/get-next-state
 clj꞉cellular-automata-clojure.core꞉> 
+#'cellular-automata-clojure.core/-main
+clj꞉cellular-automata-clojure.core꞉> 
+#'cellular-automata-clojure.core/-main
+clj꞉cellular-automata-clojure.core꞉> 

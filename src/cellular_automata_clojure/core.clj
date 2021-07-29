@@ -6,9 +6,10 @@
   [vec ruleset]
   (ruleset vec))
 
-
 (defn split-up [input]
-  (into [[(last input) (first input) (second input)]] (map #(apply vector %) (partition 3 1 input input))))
+  (into 
+   [[(last input) (first input) (second input)]]
+   (map #(apply vector %) (partition 3 1 input input))))
 
 (defn get-next-state
   [input rule]
@@ -17,11 +18,10 @@
        (map #(apply-rule (apply vector %) rule))
        (apply vector)))
 
-(defn -main [& args]
-  (apply-rule [1 1 1] rules/rule30))
+(defn -main [generations]
+  (loop [i 0 stop-at generations curr-state [0 0 0 1 0 0 0]]
+    (if (= i stop-at)
+      curr-state
+      (do (println curr-state) (flush)
+          (recur (inc i) stop-at (get-next-state curr-state rules/rule30))))))
 
-(apply-rule (vector 1 1 1) rules/rule30)
-
-(get-next-state [1 1 1 0 0 0 1 1 1 0 0 0] rules/rule30)
-
-(partition 3 1 [1 1 1 0 0 0 1 1 1 0 0 0] [1 1 1 0 0 0 1 1 1 0 0 0])
