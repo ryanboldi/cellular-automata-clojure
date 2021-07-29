@@ -164,3 +164,9 @@ clj꞉cellular-automata-clojure.boards꞉> 
 clj꞉cellular-automata-clojure.boards꞉> 
 #'cellular-automata-clojure.boards/random-board-long
 clj꞉cellular-automata-clojure.boards꞉> 
+nil
+clj꞉cellular-automata-clojure.examples.1d꞉> 
+#'cellular-automata-clojure.examples.1d/do-run
+clj꞉cellular-automata-clojure.examples.1d꞉> 
+#'cellular-automata-clojure.examples.1d/-main
+clj꞉cellular-automata-clojure.examples.1d꞉> 
