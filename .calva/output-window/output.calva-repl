@@ -92,3 +92,11 @@ clj꞉cellular-automata-clojure.examples.1d꞉> 
 clj꞉cellular-automata-clojure.examples.1d꞉> 
 #'cellular-automata-clojure.examples.1d/do-run
 clj꞉cellular-automata-clojure.examples.1d꞉> 
+#'cellular-automata-clojure.boards/random-board
+clj꞉cellular-automata-clojure.boards꞉> 
+#'cellular-automata-clojure.boards/random-board
+clj꞉cellular-automata-clojure.boards꞉> 
+#'cellular-automata-clojure.boards/random-board-short
+clj꞉cellular-automata-clojure.boards꞉> 
+#'cellular-automata-clojure.boards/random-board-long
+clj꞉cellular-automata-clojure.boards꞉> 

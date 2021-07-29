@@ -12,3 +12,9 @@
 
 (def lonesome-one-short (lonesome-one 31))
 (def lonesome-one-long (lonesome-one 101))
+
+(defn random-board ([] (random-board 10))
+  ([length] (repeatedly length (int (rand)))))
+
+(def random-board-short (random-board 30))
+(def random-board-long (random-board 100))
