@@ -14,7 +14,9 @@
 (def lonesome-one-long (lonesome-one 101))
 
 (defn random-board ([] (random-board 10))
-  ([length] (repeatedly length (int (rand)))))
+  ([length] (apply vector (repeatedly length #(int (rand 2))))))
 
 (def random-board-short (random-board 30))
 (def random-board-long (random-board 100))
+
+(apply vector (repeatedly 10 #(int (rand 2))))

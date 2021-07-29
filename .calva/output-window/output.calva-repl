@@ -100,3 +100,67 @@ clj꞉cellular-automata-clojure.boards꞉> 
 clj꞉cellular-automata-clojure.boards꞉> 
 #'cellular-automata-clojure.boards/random-board-long
 clj꞉cellular-automata-clojure.boards꞉> 
+; ClassCastException class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')  clojure.lang.Numbers.isPos (Numbers.java:96)
+clj꞉cellular-automata-clojure.boards꞉> 
+0.4655529892982804
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+1
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+1
+clj꞉cellular-automata-clojure.boards꞉> 
+1
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+1
+clj꞉cellular-automata-clojure.boards꞉> 
+0
+clj꞉cellular-automata-clojure.boards꞉> 
+1
+clj꞉cellular-automata-clojure.boards꞉> 
+; ClassCastException class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')  clojure.core/repeatedly/fn--6176 (core.clj:5089)
+clj꞉cellular-automata-clojure.boards꞉> 
+; ClassCastException class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')  clojure.core/repeatedly/fn--6176 (core.clj:5089)
+clj꞉cellular-automata-clojure.boards꞉> 
+; ClassCastException class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')  clojure.core/repeatedly/fn--6176 (core.clj:5089)
+clj꞉cellular-automata-clojure.boards꞉> 
+[(0 0 1 1 0 1 1 1 0 0)]
+clj꞉cellular-automata-clojure.boards꞉> 
+[0 0 1 0 0 1 0 0 1 0]
+clj꞉cellular-automata-clojure.boards꞉> 
+#'cellular-automata-clojure.boards/random-board
+clj꞉cellular-automata-clojure.boards꞉> 
+#'cellular-automata-clojure.boards/random-board-short
+clj꞉cellular-automata-clojure.boards꞉> 
+#'cellular-automata-clojure.boards/random-board-long
+clj꞉cellular-automata-clojure.boards꞉> 
