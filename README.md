@@ -1,14 +1,18 @@
 # cellular-automata-clojure
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library designed to handle various forms of cellular automata through the console.
 
 ## Usage
 
-FIXME
+Run the tests (with automatic refresh):
+
+```powershell
+lein test-refresh
+```
 
 ## License
 
-Copyright © 2021 FIXME
+Copyright © 2021 Ryan Boldi
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
