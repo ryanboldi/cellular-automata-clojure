@@ -1,5 +1,6 @@
 (ns cellular-automata-clojure.core
-  (:require [cellular-automata-clojure.rules :as rules]))
+  (:require [cellular-automata-clojure.rules :as rules]
+             [cellular-automata-clojure.boards :as boards]))
 
 (defn apply-rule
   "applies ruleset to length 3 vector (vec)"
@@ -23,11 +24,8 @@
        (map #(if (zero? %) "." "#"))
        (apply str)))
 
-(defn -main [generations]
-  (loop [i 0 stop-at generations curr-state [0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1]]
-    (if (= i stop-at)
-      curr-state
-      (do (println (visualize curr-state)) (flush)
-          (recur (inc i) stop-at (get-next-state curr-state rules/rule30))))))
 
-(-main 10)
+(defn -main [& args]
+  (map #(if (string? %) (read-string %) %) args))
+
+(-main :generations 100 :rule "rule30")
