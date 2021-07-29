@@ -18,5 +18,3 @@
 
 (def random-board-short (random-board 30))
 (def random-board-long (random-board 100))
-
-(apply vector (repeatedly 10 #(int (rand 2))))
