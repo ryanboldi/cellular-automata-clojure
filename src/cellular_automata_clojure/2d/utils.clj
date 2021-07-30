@@ -1,5 +1,6 @@
 (ns cellular-automata-clojure.2d.utils
-  (:require [cellular-automata-clojure.2d.rules :as rules]))
+  (:require [cellular-automata-clojure.1d.utils :refer [visualize] :rename {visualize visualize-1d}]
+            [cellular-automata-clojure.2d.rules :as rules]))
 
 (defn random-board [] (apply vector (repeatedly 5 #(rand-int 2))))
 (def board (apply vector (repeatedly 5 random-board)))
@@ -69,3 +70,8 @@ board
        (partition 3 3)
        (map #(apply vector %))
        (apply vector)))
+
+(defn visualize [board]
+  (apply str (map #(str (visualize-1d %) "\n") board)))
+
+(println (visualize (vector (vector 0 1 0) (vector 1 1 1) (vector 0 0 0))))
