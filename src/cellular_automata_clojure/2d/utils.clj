@@ -20,14 +20,26 @@ board
           (recur (- rem width) x (inc y))
           (recur (dec rem) (inc x) y))))))
 
-(defn xy-to-ind [{:keys [:x :y]} board]
+(defn xy-to-ind
+ "converts xy coords into a flattened index"
+  [{:keys [:x :y]} board]
   (let [width (count board)]
     (+ (* y width) x)))
 
+(defn nth-with-wrapping [coll index]
+  (let [len (count coll)]
+    (cond
+      (> index (dec len)) (nth-with-wrapping coll (- index len))
+      (< index 0) (nth-with-wrapping coll (+ index len))
+      :else (nth coll index))))
 
-(defn get-at [{:keys [:x :y]} board])
+(defn get-at-xy
+ "returns the value at a given xy coord - includes wrapping"
+  [{:keys [:x :y]} board]
+  (nth-with-wrapping (nth-with-wrapping board y) x))
 
 (ind-to-xy 14 board)
+
 
 
 (defn get-top-left [index board]
