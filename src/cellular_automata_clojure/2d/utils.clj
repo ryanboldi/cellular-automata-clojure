@@ -59,11 +59,13 @@ board
 
 (defn get-all-neighbors [board]
   (let [flat-board (flatten board)
-       len (count flat-board)]
+        len (count flat-board)]
     (map #(get-neighbors % board) (range 0 len))))
 
-(def board1 (vector (vector 0 0 0) (vector 0 1 1)  (vector 1 1 0)))
-
-(map rules/conways-game-of-life (get-all-neighbors board1))
-
-;(defn apply-rule [rule board])
+(defn apply-rule [rule board]
+  (->> board
+       (get-all-neighbors)
+       (map rule)
+       (partition 3 3)
+       (map #(apply vector %))
+       (apply vector)))
