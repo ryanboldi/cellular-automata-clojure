@@ -1,4 +1,5 @@
-(ns cellular-automata-clojure.2d.utils)
+(ns cellular-automata-clojure.2d.utils
+  (:require [cellular-automata-clojure.2d.rules :as rules]))
 
 (defn random-board [] (apply vector (repeatedly 5 #(rand-int 2))))
 (def board (apply vector (repeatedly 5 random-board)))
@@ -59,10 +60,10 @@ board
 (defn get-all-neighbors [board]
   (let [flat-board (flatten board)
        len (count flat-board)]
-    (map #(get-neighbors % board) (range 0 (dec len)))))
+    (map #(get-neighbors % board) (range 0 len))))
 
-(get-all-neighbors (vector (vector 0 0 0) (vector 0 1 1)  (vector 1 1 0)))
+(def board1 (vector (vector 0 0 0) (vector 0 1 1)  (vector 1 1 0)))
 
-;(map conways-game-of-life (map #(get-neighbors % board)))
+(map rules/conways-game-of-life (get-all-neighbors board1))
 
 ;(defn apply-rule [rule board])
