@@ -5,7 +5,7 @@ A Clojure library designed to handle various forms of cellular automata through 
 ## Usage
 
 ### 1 Dimensional
-To run a simple one dimensional cellular automata, pick a rule from [this file](src\cellular_automata_clojure\rules.clj), or add your own. Some example rules are [rule30](https://en.wikipedia.org/wiki/Rule_30) and [rule110](https://en.wikipedia.org/wiki/Rule_110):
+To run a simple one dimensional cellular automata, pick a rule from [this file](src\cellular_automata_clojure\1d\rules.clj), or add your own. Some example rules are [rule30](https://en.wikipedia.org/wiki/Rule_30) and [rule110](https://en.wikipedia.org/wiki/Rule_110):
 
 ```clojure
 (def rule30
@@ -29,7 +29,7 @@ To run a simple one dimensional cellular automata, pick a rule from [this file](
    '(1 1 1) 0})
 ```
 
-After this, pick a set of starting conditions from [this file](src\cellular_automata_clojure\boards.clj), or add your own.
+After this, pick a set of starting conditions from [this file](src\cellular_automata_clojure\1d\boards.clj), or add your own.
 Lonesome one is a starting condition where there is a single one in the middle of a sea of zeroes on either side. The two default versions of this have either 15 zeroes on either side, or 50. You can add your own to change this number and subsequently change the length of the entire cellular automata.
 
 ```clojure
@@ -50,14 +50,14 @@ Lonesome one is a starting condition where there is a single one in the middle o
 Now that you've picked the ruleset and starting conditions, to run a simple 1D cellular automata, run the following command:
 
 ```
-lein run -m cellular-automata-clojure.examples.1d :generations 50 :rule rule30 :start lonesome-one-short
+lein run -m cellular-automata-clojure.1d.examples :generations 50 :rule rule30 :start lonesome-one-short
 ```
 
 #### Examples:
 <details>
     <summary>
         <code>
-lein run -m cellular-automata-clojure.examples.1d :generations 10 :rule rule30 :start lonesome-one-short
+lein run -m cellular-automata-clojure.1d.examples :generations 10 :rule rule30 :start lonesome-one-short
         </code>
     </summary>
     =>
@@ -80,7 +80,7 @@ ___
 <details>
     <summary>
         <code>
-lein run -m cellular-automata-clojure.examples.1d :generations 50 :rule rule30 :start lonesome-one-long
+lein run -m cellular-automata-clojure.1d.examples :generations 50 :rule rule30 :start lonesome-one-long
         </code>
     </summary>
 =>

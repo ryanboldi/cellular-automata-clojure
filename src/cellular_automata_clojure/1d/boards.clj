@@ -1,4 +1,4 @@
-(ns cellular-automata-clojure.boards)
+(ns cellular-automata-clojure.1d.boards)
 
 (defn lonesome-one
   "the board is a bunch of zeros on either side with a one in the middle"

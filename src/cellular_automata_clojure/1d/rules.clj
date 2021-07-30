@@ -1,4 +1,4 @@
-(ns cellular-automata-clojure.rules)
+(ns cellular-automata-clojure.1d.rules)
 
 (def rule30
   {'(0 0 0) 0

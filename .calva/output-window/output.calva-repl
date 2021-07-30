@@ -18,155 +18,54 @@
 clj꞉cellular-automata-clojure.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉cellular-automata-clojure.core꞉> 
-; CompilerException java.lang.RuntimeException: Unable to resolve symbol: do-run in this context, compiling:(d:\Productivity\Repositories\cellular-automata-clojure\src\cellular_automata_clojure\examples\1D.clj:18:4) 
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-; CompilerException java.lang.RuntimeException: No such namespace: core, compiling:(d:\Productivity\Repositories\cellular-automata-clojure\src\cellular_automata_clojure\examples\1D.clj:13:20) 
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-; CompilerException java.lang.RuntimeException: Unable to resolve symbol: rule110 in this context, compiling:(d:\Productivity\Repositories\cellular-automata-clojure\src\cellular_automata_clojure\examples\1D.clj:20:5) 
-clj꞉cellular-automata-clojure.examples.1d꞉> 
 nil
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/-main
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/-main
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-; CompilerException java.lang.ClassNotFoundException: cellular-automata-clojure.rules, compiling:(d:\Productivity\Repositories\cellular-automata-clojure\src\cellular_automata_clojure\examples\1D.clj:14:66) 
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/-main
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-nil
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/-main
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+#'cellular-automata-clojure.1d.examples/do-run
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+#'cellular-automata-clojure.1d.examples/-main
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+; Exception No namespace: cellular-automata-clojure.1d.boards found  clojure.core/the-ns (core.clj:4128)
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+#'cellular-automata-clojure.1d.examples/do-run
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+#'cellular-automata-clojure.1d.examples/-main
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+; Exception No namespace: cellular-automata-clojure.1d.board found  clojure.core/the-ns (core.clj:4128)
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+; CompilerException java.lang.RuntimeException: No such namespace: utils, compiling:(d:\Productivity\Repositories\cellular-automata-clojure\src\cellular_automata_clojure\1d\examples.clj:12:22) 
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+#'cellular-automata-clojure.1d.boards/-main
+clj꞉cellular-automata-clojure.1d.boards꞉> 
+; Exception No namespace: cellular-automata-clojure.1d.board found  clojure.core/the-ns (core.clj:4128)
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+#'cellular-automata-clojure.1d.examples/do-run
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+; NullPointerException   clojure.core/var-get (core.clj:4297)
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+; NullPointerException   clojure.core/var-get (core.clj:4297)
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+#'cellular-automata-clojure.1d.examples/do-run
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+#'cellular-automata-clojure.1d.examples/-main
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+; NullPointerException   clojure.core/var-get (core.clj:4297)
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+(ns-resolve 'cellular-automata-clojure.1d.boards lonesome-one-short)
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: lonesome-one-short in this context, compiling:(d:\Productivity\Repositories\cellular-automata-clojure\.calva\output-window\output.calva-repl:53:1) 
+clj꞉cellular-automata-clojure.1d.examples꞉> 
+#'cellular-automata-clojure.1d.boards/lonesome-one
+clj꞉cellular-automata-clojure.1d.boards꞉> 
+#'cellular-automata-clojure.1d.boards/lonesome-one-short
+clj꞉cellular-automata-clojure.1d.boards꞉> 
+(ns-resolve 'cellular-automata-clojure.1d.boards lonesome-one-short)
 ; ClassCastException class clojure.lang.PersistentVector cannot be cast to class clojure.lang.Symbol (clojure.lang.PersistentVector and clojure.lang.Symbol are in unnamed module of loader 'app')  clojure.core/ns-resolve (core.clj:4335)
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.boards/lonesome-one-short
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-; ArityException Wrong number of args (0) passed to: PersistentVector  clojure.lang.AFn.throwArity (AFn.java:429)
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-; IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Var  clojure.lang.RT.seqFrom (RT.java:550)
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-; ClassCastException class clojure.lang.Var cannot be cast to class java.io.PushbackReader (clojure.lang.Var is in unnamed module of loader 'app'; java.io.PushbackReader is in module java.base of loader 'bootstrap')  clojure.core/read (core.clj:3733)
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-; ArityException Wrong number of args (0) passed to: PersistentVector  clojure.lang.AFn.throwArity (AFn.java:429)
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-; IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Var  clojure.lang.RT.seqFrom (RT.java:550)
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.boards/lonesome-one-short
-nil
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.boards/lonesome-one-short
-nil
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
-nil
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.boards/lonesome-one-short
-nil
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.boards/lonesome-one-short
-nil
-clj꞉cellular-automata-clojure.examples.1d꞉> 
+clj꞉cellular-automata-clojure.1d.boards꞉> 
+(ns-resolve 'cellular-automata-clojure.1d.boards lonesome-one-short)
+; ClassCastException class clojure.lang.PersistentVector cannot be cast to class clojure.lang.Symbol (clojure.lang.PersistentVector and clojure.lang.Symbol are in unnamed module of loader 'app')  clojure.core/ns-resolve (core.clj:4335)
+clj꞉cellular-automata-clojure.1d.boards꞉> 
+(ns-resolve 'cellular-automata-clojure.1d.boards (read-string "lonesome-one-short"))
+#'cellular-automata-clojure.1d.boards/lonesome-one-short
+clj꞉cellular-automata-clojure.1d.boards꞉> 
+(var-get (ns-resolve 'cellular-automata-clojure.1d.boards (read-string "lonesome-one-short")))
 [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
-nil
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/-main
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.boards/random-board
-clj꞉cellular-automata-clojure.boards꞉> 
-#'cellular-automata-clojure.boards/random-board
-clj꞉cellular-automata-clojure.boards꞉> 
-#'cellular-automata-clojure.boards/random-board-short
-clj꞉cellular-automata-clojure.boards꞉> 
-#'cellular-automata-clojure.boards/random-board-long
-clj꞉cellular-automata-clojure.boards꞉> 
-; ClassCastException class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')  clojure.lang.Numbers.isPos (Numbers.java:96)
-clj꞉cellular-automata-clojure.boards꞉> 
-0.4655529892982804
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-1
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-1
-clj꞉cellular-automata-clojure.boards꞉> 
-1
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-1
-clj꞉cellular-automata-clojure.boards꞉> 
-0
-clj꞉cellular-automata-clojure.boards꞉> 
-1
-clj꞉cellular-automata-clojure.boards꞉> 
-; ClassCastException class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')  clojure.core/repeatedly/fn--6176 (core.clj:5089)
-clj꞉cellular-automata-clojure.boards꞉> 
-; ClassCastException class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')  clojure.core/repeatedly/fn--6176 (core.clj:5089)
-clj꞉cellular-automata-clojure.boards꞉> 
-; ClassCastException class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')  clojure.core/repeatedly/fn--6176 (core.clj:5089)
-clj꞉cellular-automata-clojure.boards꞉> 
-[(0 0 1 1 0 1 1 1 0 0)]
-clj꞉cellular-automata-clojure.boards꞉> 
-[0 0 1 0 0 1 0 0 1 0]
-clj꞉cellular-automata-clojure.boards꞉> 
-#'cellular-automata-clojure.boards/random-board
-clj꞉cellular-automata-clojure.boards꞉> 
-#'cellular-automata-clojure.boards/random-board-short
-clj꞉cellular-automata-clojure.boards꞉> 
-#'cellular-automata-clojure.boards/random-board-long
-clj꞉cellular-automata-clojure.boards꞉> 
-nil
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/do-run
-clj꞉cellular-automata-clojure.examples.1d꞉> 
-#'cellular-automata-clojure.examples.1d/-main
-clj꞉cellular-automata-clojure.examples.1d꞉> 
+clj꞉cellular-automata-clojure.1d.boards꞉> 
