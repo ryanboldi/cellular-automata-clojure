@@ -69,3 +69,16 @@ clj꞉cellular-automata-clojure.1d.boards꞉> 
 (var-get (ns-resolve 'cellular-automata-clojure.1d.boards (read-string "lonesome-one-short")))
 [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
 clj꞉cellular-automata-clojure.1d.boards꞉> 
+nil
+clj꞉cellular-automata-clojure.2d.utils꞉> 
+[[1 1 1 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 1 1 1 1]
+ [1 1 1 1 1 1 1 1 1 1]]
+clj꞉cellular-automata-clojure.2d.utils꞉> 
