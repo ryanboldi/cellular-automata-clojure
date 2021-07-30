@@ -10,7 +10,7 @@ board
 (apply mapv vector (partition 3 (flatten board)))
 
 (defn ind-to-xy
- "takes a flattened index and turns it into an xy position for a square board"
+  "takes a flattened index and turns it into an xy position for a square board"
   [index board]
   (let [width (count board)]
     (loop [rem index x 0 y 0]
@@ -21,7 +21,7 @@ board
           (recur (dec rem) (inc x) y))))))
 
 (defn xy-to-ind
- "converts xy coords into a flattened index"
+  "converts xy coords into a flattened index"
   [{:keys [:x :y]} board]
   (let [width (count board)]
     (+ (* y width) x)))
@@ -34,16 +34,13 @@ board
       :else (nth coll index))))
 
 (defn get-at-xy
- "returns the value at a given xy coord - includes wrapping"
+  "returns the value at a given xy coord - includes wrapping"
   [{:keys [:x :y]} board]
   (nth-with-wrapping (nth-with-wrapping board y) x))
 
-
-(defn get-neighbors
- "returns a vector of the 9 neighbours of a given flattened index"
-  [index board]
-  (let [{:keys [:x :y]} (ind-to-xy index board)
-        top-left (get-at-xy {:x (dec x) :y (dec y)} board)
+(defn get-neighbors-from-xy
+  [{:keys [:x :y]} board]
+  (let [top-left (get-at-xy {:x (dec x) :y (dec y)} board)
         top-mid (get-at-xy {:x x :y (dec y)} board)
         top-right (get-at-xy {:x (inc x) :y (dec y)} board)
         left (get-at-xy {:x (dec x) :y y} board)
@@ -53,3 +50,19 @@ board
         bot-mid (get-at-xy {:x x :y (inc y)} board)
         bot-right (get-at-xy {:x (inc x) :y (inc y)} board)]
     (vector top-left top-mid top-right left mid right bot-left bot-mid bot-right)))
+
+(defn get-neighbors
+  "returns a vector of the 9 neighbours of a given flattened index"
+  [index board]
+  (get-neighbors-from-xy (ind-to-xy index board) board))
+
+(defn get-all-neighbors [board]
+  (let [flat-board (flatten board)
+       len (count flat-board)]
+    (map #(get-neighbors % board) (range 0 (dec len)))))
+
+(get-all-neighbors (vector (vector 0 0 0) (vector 0 1 1)  (vector 1 1 0)))
+
+;(map conways-game-of-life (map #(get-neighbors % board)))
+
+;(defn apply-rule [rule board])
