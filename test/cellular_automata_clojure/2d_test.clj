@@ -44,11 +44,15 @@
     (testing "left-right wrapping functionality"
       (is (= (utils/get-at-xy {:x -1 :y 0} board) (utils/get-at-xy {:x 2 :y 0} board))))
     (testing "top-down wrapping functionality"
-      (is (= (utils/get-at-xy {:x 0 :y -1} board) (utils/get-at-xy {:x 0 :y 2} board))))))
+      (is (= (utils/get-at-xy {:x 0 :y -1} board) (utils/get-at-xy {:x 0 :y 2} board))))
+    (testing "top-right to bot-left wrapping functionality"
+      (is (= (utils/get-at-xy {:x 3 :y -1} board) (utils/get-at-xy {:x 0 :y 2} board))))))
 
 (deftest get-neighbors-test
   (let [board (vector (vector 1 2 3) (vector 4 5 6) (vector 7 8 9))]
     (testing "top left neighbors"
       (is (= (utils/get-neighbors 0 board) (vector 9 7 8 3 1 2 6 4 5))))
     (testing "middle neighbors"
-      (is (= (utils/get-neighbors 4 board) (flatten board))))))
+      (is (= (utils/get-neighbors 4 board) (flatten board))))
+    (testing "top right neighbors"
+      (is (= (utils/get-neighbors 2 board) (vector 8 9 7 2 3 1 5 6 4))))))
