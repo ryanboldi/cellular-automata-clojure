@@ -64,14 +64,23 @@ board
     (map #(get-neighbors % board) (range 0 len))))
 
 (defn apply-rule [rule board]
-  (->> board
-       (get-all-neighbors)
-       (map rule)
-       (partition 3 3)
-       (map #(apply vector %))
-       (apply vector)))
+  (let [len (count board)]
+    (->> board
+         (get-all-neighbors)
+         (map rule)
+         (partition len len)
+         (map #(apply vector %))
+         (apply vector))))
+
+(apply-rule rules/conways-game-of-life (apply vector (repeat 10 (vector 0 1 0 1 0 1 0 1 0 1 0))))
 
 (defn visualize [board]
   (apply str (map #(str (visualize-1d %) "\n") board)))
 
-(println (visualize (vector (vector 0 1 0) (vector 1 1 1) (vector 0 0 0))))
+(defn -main []
+  (loop [curr-state (apply vector (repeat 10 (vector 0 1 0 1 0 1 0 1 0 1 0))) stop-at 10 curr 0]
+    (println (visualize curr-state))
+    (Thread/sleep 100)
+    (if (= curr stop-at)
+      curr-state
+      (recur (apply-rule rules/conways-game-of-life curr-state) stop-at (inc curr)))))

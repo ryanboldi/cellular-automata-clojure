@@ -21,5 +21,3 @@
             :rule 'rule110
             :start 'lonesome-one-short}
            (apply hash-map (map #(if (string? %) (read-string %) %) args))))))
-
-(-main)
