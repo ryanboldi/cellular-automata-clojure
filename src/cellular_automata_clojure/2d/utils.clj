@@ -77,10 +77,37 @@ board
 (defn visualize [board]
   (apply str (map #(str (visualize-1d %) "\n") board)))
 
+
+(def blinker-board
+  (vector
+   (vector 0 0 0 0 0)
+   (vector 0 0 1 0 0)
+   (vector 0 0 1 0 0)
+   (vector 0 0 1 0 0)
+   (vector 0 0 0 0 0)))
+
+(def beacon-board
+  (vector
+   (vector 0 0 0 0 0 0)
+   (vector 0 1 1 0 0 0)
+   (vector 0 1 0 0 0 0)
+   (vector 0 0 0 0 1 0)
+   (vector 0 0 0 1 1 0)
+   (vector 0 0 0 0 0 0)))
+
+; THIS IS AN EXTREMELY COOL STARTING POSITION, keep it in the board file
+(defn big-board [n]
+  (apply vector 
+         (concat (repeat (/ n 2) (apply vector (repeat n 0)))
+                 (repeat (/ n 2) (apply vector (repeat n 1))))))
+
 (defn -main []
-  (loop [curr-state (apply vector (repeat 10 (vector 0 1 0 1 0 1 0 1 0 1 0))) stop-at 10 curr 0]
+  (loop [curr-state (big-board 60) stop-at 1000 curr 0]
     (println (visualize curr-state))
-    (Thread/sleep 100)
+    (flush)
+    (Thread/sleep 300)
     (if (= curr stop-at)
       curr-state
       (recur (apply-rule rules/conways-game-of-life curr-state) stop-at (inc curr)))))
+
+
