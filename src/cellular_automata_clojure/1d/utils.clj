@@ -21,7 +21,7 @@
 
 (defn visualize [input]
   (->> input
-       (map #(if (zero? %) "  " " #"))
+       (map #(if (zero? %) "." "#"))
        (apply str)))
 
 (defn do-run [{:keys [generations rule start]
