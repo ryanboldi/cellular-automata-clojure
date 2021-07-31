@@ -1,6 +1,7 @@
 (ns cellular-automata-clojure.2d.utils
   (:require [cellular-automata-clojure.1d.utils :refer [visualize] :rename {visualize visualize-1d}]
-            [cellular-automata-clojure.2d.rules :as rules]))
+            [cellular-automata-clojure.2d.rules]
+            [cellular-automata-clojure.2d.boards]))
 
 (defn random-board [] (apply vector (repeatedly 5 #(rand-int 2))))
 (def board (apply vector (repeatedly 5 random-board)))
@@ -63,7 +64,7 @@ board
         len (count flat-board)]
     (map #(get-neighbors % board) (range 0 len))))
 
-(defn apply-rule [rule board]
+(defn apply-rule [board rule]
   (let [len (count board)]
     (->> board
          (get-all-neighbors)
@@ -72,42 +73,15 @@ board
          (map #(apply vector %))
          (apply vector))))
 
-(apply-rule rules/conways-game-of-life (apply vector (repeat 10 (vector 0 1 0 1 0 1 0 1 0 1 0))))
-
 (defn visualize [board]
   (apply str (map #(str (visualize-1d %) "\n") board)))
 
-
-(def blinker-board
-  (vector
-   (vector 0 0 0 0 0)
-   (vector 0 0 1 0 0)
-   (vector 0 0 1 0 0)
-   (vector 0 0 1 0 0)
-   (vector 0 0 0 0 0)))
-
-(def beacon-board
-  (vector
-   (vector 0 0 0 0 0 0)
-   (vector 0 1 1 0 0 0)
-   (vector 0 1 0 0 0 0)
-   (vector 0 0 0 0 1 0)
-   (vector 0 0 0 1 1 0)
-   (vector 0 0 0 0 0 0)))
-
-; THIS IS AN EXTREMELY COOL STARTING POSITION, keep it in the board file
-(defn big-board [n]
-  (apply vector 
-         (concat (repeat (/ n 2) (apply vector (repeat n 0)))
-                 (repeat (/ n 2) (apply vector (repeat n 1))))))
-
-(defn -main []
-  (loop [curr-state (big-board 60) stop-at 1000 curr 0]
-    (println (visualize curr-state))
-    (flush)
-    (Thread/sleep 300)
-    (if (= curr stop-at)
-      curr-state
-      (recur (apply-rule rules/conways-game-of-life curr-state) stop-at (inc curr)))))
-
-
+(defn do-run [{:keys [generations rule start]
+               :as   argmap}]
+  (let [start-state (var-get (ns-resolve 'cellular-automata-clojure.2d.boards start)) ruleset (var-get (ns-resolve 'cellular-automata-clojure.2d.rules rule))]
+    (loop [i 0 curr-state start-state]
+      (Thread/sleep 50)
+      (if (= i generations)
+        curr-state
+        (do (println (visualize curr-state)) (flush)
+            (recur (inc i) (apply-rule curr-state ruleset)))))))
