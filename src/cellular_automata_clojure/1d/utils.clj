@@ -27,9 +27,9 @@
 (defn do-run [{:keys [generations rule start]
                :as   argmap}]
   (let [start-state (var-get (ns-resolve 'cellular-automata-clojure.1d.boards start)) ruleset (var-get (ns-resolve 'cellular-automata-clojure.1d.rules rule))]
-    (loop [i 0 stop-at generations curr-state start-state]
+    (loop [i 0 curr-state start-state]
       (Thread/sleep 50)
-      (if (= i stop-at)
+      (if (= i generations)
         curr-state
         (do (println (visualize curr-state)) (flush)
-            (recur (inc i) stop-at (get-next-state curr-state ruleset)))))))
+            (recur (inc i) (get-next-state curr-state ruleset)))))))
